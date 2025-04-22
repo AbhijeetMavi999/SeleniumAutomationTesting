@@ -5,15 +5,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class CSSLocators {
+public class SubChildOrDirectChildElement {
     public static void main(String[] args) {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
 
         driver.get("https://www.salesforce.com/form/developer-signup/?d=pb");
-        driver.findElement(By.cssSelector("input[name='UserFirstName']"))
-                .sendKeys("Testing");
-        driver.findElement(By.cssSelector("input[name^='CompanyName']"))
-                .sendKeys("LtiMindtree");
+        driver.findElement(By.cssSelector("select[name='CompanyCountry'] > option[value='RO']"))
+                .sendKeys("RO");
+        driver.manage().window().maximize();
     }
 }
