@@ -1,4 +1,4 @@
-package sdetqa;
+package waits;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
