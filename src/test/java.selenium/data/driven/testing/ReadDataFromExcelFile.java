@@ -30,17 +30,19 @@ public class ReadDataFromExcelFile {
         System.out.println("Total number of rows: "+totalNumberOfRows);
         System.out.println("Total number of columns: "+totalNumberOfColumns);
 
-        for(int r=0; r<=totalNumberOfRows; r++) {
+        for(int r=0; r<totalNumberOfRows; r++) {
             XSSFRow currentRow = sheet.getRow(r);
-            if (currentRow == null) continue;
             for(int c=0; c<totalNumberOfColumns; c++) {
-                XSSFCell column = currentRow.getCell(c);
-                System.out.print((column == null ? "" : column.toString()) + "\t");
+                XSSFCell cell = currentRow.getCell(c);
+                System.out.print((cell == null ? "" : cell.toString()) + "\t");
             }
+            // After all columns in the current row are processed, moves to the next line for the next row.
             System.out.println();
         }
 
+        // Closes the XSSFWorkbook object, releasing the resources it uses.
         workbook.close();
+        // Closes the FileInputStream object, releasing the resources it uses.
         fileInputStream.close();
     }
 }

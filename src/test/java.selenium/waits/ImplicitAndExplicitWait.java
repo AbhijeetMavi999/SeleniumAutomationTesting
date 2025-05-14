@@ -1,4 +1,4 @@
-package waits;
+package test.java.selenium.waits;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

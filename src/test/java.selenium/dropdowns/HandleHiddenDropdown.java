@@ -23,8 +23,8 @@ public class HandleHiddenDropdown {
         driver.findElement(By.xpath("//span[normalize-space()='PIM']")).click();
 
         // Clicked on dropdown
-        driver.findElement(By.xpath("//div[@class='oxd-table-filter']//div[3]//div[1]//div[2]//div[1]//div[1]//div[2]//i[1]")).click();        Thread.sleep(5000);
-
+        driver.findElement(By.xpath("//div[@class='oxd-table-filter']//div[3]//div[1]//div[2]//div[1]//div[1]//div[2]//i[1]")).click();
+        Thread.sleep(5000);
 
         // Select single option
 //        driver.findElement(By.xpath("//span[normalize-space()='Part-Time Contract']")).click();
